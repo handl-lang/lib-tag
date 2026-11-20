@@ -1,3 +1,3 @@
 -- lib-tag: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
-{ modules: ["tag"] }
+{ modules: ["tag"], description: "Tagged-value surface — host runtime internal.", license: "MIT" }

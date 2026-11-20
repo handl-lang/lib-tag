@@ -2,14 +2,15 @@
 
 The `tag` package source, embedded by `plugin-lib-tag`.
 
-Part of the `handl-lang` org split (ADR-0128). History is a `git subtree
-split` of `host/handl-packages/handl-packages/tag/`.
-
 ## Layout
 
 ```text
-src/        the .hnl sources
-pkg.hnl     dependencies, when any: `{ deps: { <name>: "branch:<ref>" } }`
+src/        the .hnl sources (+ lib.rs const export)
+pkg.hnl     package manifest — modules, deps, description, license
+Cargo.toml  the const-only crate manifest
+xtask/      cargo xtask gate (fmt → clippy → test → doc)
+scripts/hnl-gate.sh   the gate
+ci.sh       bupha entry
 ```
 
 ## Gate
@@ -17,6 +18,8 @@ pkg.hnl     dependencies, when any: `{ deps: { <name>: "branch:<ref>" } }`
 ```bash
 HNL=../host-cli/target/debug/hnl scripts/hnl-gate.sh
 ```
+
+The Rust crate gates via `cargo xtask gate`.
 
 ## License
 

@@ -2,9 +2,11 @@
 name = "handl-lib-tag"
 version = "0.1.0"
 edition = "2024"
-description = "tag: tagged-value surface — host runtime internal (ADR-0128 split)."
-license = "MIT OR Apache-2.0"
+description = "tag: tagged-value surface — host runtime internal."
+license = "MIT"
 repository = "https://github.com/handl-lang/lib-tag"
+homepage = "https://github.com/handl-lang/lib-tag"
+readme = "README.md"
 
 # Const-only: pure handl.
 [dependencies]
