@@ -1,0 +1,23 @@
+# lib-tag atom spec (P-013/T-151) — Tag inspection/dispatch ops — native impls in host `plugin-lib-tag` (`tag_op_registry`); impl keys are the `handle ... with` hints (rust_ prefix dropped).
+# `sig` = handl signature (~> canonical), `impl` = key for the
+# module's impl table, `total` replaces `guarantee: True` decl
+# clauses. Generated from the cap/op/handle triples in
+# src/index.hnl.
+module: tag
+atoms:
+  - name: tag.untag
+    sig: "Value ~> Value"
+    impl: tag_untag
+    total: true
+  - name: tag.tag_of
+    sig: "Value ~> Value"
+    impl: tag_tag_of
+    total: true
+  - name: tag.is_tag
+    sig: "Value ~> Bool"
+    impl: tag_is_tag
+    total: true
+  - name: tag.match_type
+    sig: "(Value, Value) ~> Value"
+    impl: tag_match_type
+    total: true
