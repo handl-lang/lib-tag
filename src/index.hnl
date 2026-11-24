@@ -11,13 +11,13 @@ cap "tag.untag"
 cap "tag.tag_of"
 cap "tag.is_tag"
 cap "tag.match_type"
-op "tag.untag" : Value -> Value
+op "tag.untag" : Value ~> Value
   guarantee: True
-op "tag.tag_of" : Value -> Value
+op "tag.tag_of" : Value ~> Value
   guarantee: True
-op "tag.is_tag" : Value -> Bool
+op "tag.is_tag" : Value ~> Bool
   guarantee: True
-op "tag.match_type" : (Value, Value) -> Value
+op "tag.match_type" : (Value, Value) ~> Value
   guarantee: True
 
 handle "tag.untag" with rust_tag_untag
