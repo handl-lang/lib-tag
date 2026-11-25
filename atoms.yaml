@@ -1,8 +1,10 @@
-# lib-tag atom spec (P-013/T-151) — Tag inspection/dispatch ops — native impls in host `plugin-lib-tag` (`tag_op_registry`); impl keys are the `handle ... with` hints (rust_ prefix dropped).
+# lib-tag atom spec (P-013/T-151) — Tag inspection/dispatch ops — impls are host `Function`s in plugin-lib-stdlib `ops/tag.rs` (`tag_impls()`); `plugin-lib-tag`'s `tag_op_registry` stays for kit-canonical's direct `TagModule` use.
 # `sig` = handl signature (~> canonical), `impl` = key for the
 # module's impl table, `total` replaces `guarantee: True` decl
-# clauses. Generated from the cap/op/handle triples in
-# src/index.hnl.
+# clauses. This file IS the spec (the cap/op/handle decl triples were
+# stripped from src/index.hnl in the T-151 migration); the `impl:`
+# keys resolve against `tag_impls()` (`RegistrySource::Atoms`, not the
+# kernel-ABI `kernel_impls.rs` table).
 module: tag
 atoms:
   - name: tag.untag
