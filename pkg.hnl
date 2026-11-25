@@ -1,3 +1,4 @@
 -- lib-tag: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
-{ modules: ["tag"], name: "tag", description: "Tagged-value surface — host runtime internal.", license: "MIT" }
+-- test_coverage "none": doc-only surface — tag.* ops are host runtime internals; src/index.hnl is comments only.
+{ modules: ["tag"], name: "tag", description: "Tagged-value surface — host runtime internal.", license: "MIT", test_coverage: "none" }
