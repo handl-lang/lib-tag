@@ -9,7 +9,7 @@ internal. Pure `.hnl`.
 | --- | --- |
 | `src/index.hnl` | the .hnl source (pure handl) |
 | `pkg.hnl` | package manifest — `modules: ["tag"]` |
-| `scripts/hnl-gate.sh`, `ci.sh` | the gate / bupha entry |
+| `scripts/hnl-gate.sh`, `workflows/gate.yaml` | the gate / bupha entry |
 
 ## Contract
 
